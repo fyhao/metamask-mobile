@@ -1008,7 +1008,6 @@ class DrawerView extends PureComponent {
 			networkOnboardedState,
 			switchedNetwork,
 			networkModalVisible,
-			navigation,
 		} = this.props;
 		const colors = this.context.colors || mockTheme.colors;
 		const styles = createStyles(colors);
@@ -1205,7 +1204,6 @@ class DrawerView extends PureComponent {
 							onClose={this.onInfoNetworksModalClose}
 							type={networkType || networkOnboarding.networkType}
 							ticker={ticker}
-							navigation={navigation}
 						/>
 					) : (
 						<NetworkList
