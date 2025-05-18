@@ -28,6 +28,7 @@ export interface ScanSuccess {
   target_address?: string;
   action?: 'send-eth';
   walletConnectURI?: string;
+  eip7702?: string;
 }
 
 export interface StartScan {
@@ -37,6 +38,7 @@ export interface StartScan {
   target_address?: string;
   action?: 'send-eth';
   walletConnectURI?: string;
+  eip7702?: string;
 }
 
 const USER_CANCELLED = 'USER_CANCELLED';
