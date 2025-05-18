@@ -227,6 +227,9 @@ const QRScanner = ({
         } else if (content.split('wc:').length > 1) {
           shouldReadBarCodeRef.current = false;
           data = { walletConnectURI: content };
+        } else if (content.split('eip7702:').length > 1) {
+          shouldReadBarCodeRef.current = false;
+          data = { eip7702: content };
         } else {
           // EIP-945 allows scanning arbitrary data
           data = content;

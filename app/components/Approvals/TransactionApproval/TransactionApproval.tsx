@@ -35,7 +35,9 @@ const TransactionApprovalInternal = (props: TransactionApprovalProps) => {
   }, [propsOnComplete]);
 
   if (
-    (approvalRequest?.type !== ApprovalTypes.TRANSACTION && !modalVisible) ||
+    (approvalRequest?.type !== ApprovalTypes.TRANSACTION &&
+      approvalRequest?.type !== ApprovalTypes.EIP_7702 &&
+      !modalVisible) ||
     isRedesignedEnabled
   ) {
     return null;
